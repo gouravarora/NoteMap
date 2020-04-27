@@ -1,0 +1,8 @@
+<div class="note-list">
+    <div class="note">
+        <app-notes [note]="data" (noteAdded)="noteAdded($event)"></app-notes>
+    </div>
+    <div class="list-container">
+        <app-list-notes *ngFor="let note of subNotes; let index = i;" [data]="note"></app-list-notes>
+    </div>
+</div>

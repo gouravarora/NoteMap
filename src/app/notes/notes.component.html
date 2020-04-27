@@ -1,0 +1,11 @@
+<div class="Note">
+    <p class="note-text"> {{ note.text }}</p>
+    <div class="delete-button">Delete</div>
+    <div class="new-note" (click)="createNewNote()">New Note</div>
+    <div class="create-note" *ngIf="createNote">
+        <div>
+            <input type="text" [(ngModel)]="noteText">
+            <button (click)="addNote()">Submit</button>
+        </div>
+    </div>
+</div>
